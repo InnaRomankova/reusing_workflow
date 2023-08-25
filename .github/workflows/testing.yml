@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  call-workflow-in-local=repo:
+    uses: ./.github/workflows/callworkflow.yml
+
+    steps:
+      - name: Test
+        run: mvn test

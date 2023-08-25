@@ -1,0 +1,13 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  call-workflow-in-local=repo:
+    uses: ./.github/workflows/packaging.yml
+
+    steps:
+      - name: Run
+        run: java -cp ./target/devops_test-1.0-SNAPSHOT.jar org.example.Main
