@@ -2,11 +2,11 @@ name: TESTING
 
 on:
   pull_request:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   call-workflow-in-local-repo:
-    uses: ./.github/workflows/callworkflow.yml
+    uses: .github/workflows/callworkflow.yml
 
     steps:
       - name: Test
