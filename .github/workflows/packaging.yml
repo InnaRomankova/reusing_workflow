@@ -1,4 +1,4 @@
-name: CI
+name: PACKAGING
 
 on:
   workflow_call:

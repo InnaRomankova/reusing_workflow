@@ -1,11 +1,11 @@
-name: CI
+name: TESTING
 
 on:
   pull_request:
     branches: [main]
 
 jobs:
-  call-workflow-in-local=repo:
+  call-workflow-in-local-repo:
     uses: ./.github/workflows/callworkflow.yml
 
     steps:

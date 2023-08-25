@@ -1,4 +1,4 @@
-name: CI
+name: RUNNING
 
 on:
   pull_request:

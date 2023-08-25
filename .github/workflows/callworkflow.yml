@@ -1,4 +1,4 @@
-name: CI
+name: WORKFLOW_CALL
 
 on:
   workflow_call:
