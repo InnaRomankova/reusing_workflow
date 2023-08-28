@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-workflow-in-local=repo:
-    uses: ./.github/workflows/packaging.yml
+    uses: './.github/workflows/packaging.yml'
 
     steps:
       - name: Run

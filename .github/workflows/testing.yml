@@ -6,7 +6,7 @@ on:
 
 jobs:
   call-workflow-in-local-repo:
-    uses: .github/workflows/callworkflow.yml
+    uses: './.github/workflows/callworkflow.yml'
 
     steps:
       - name: Test
