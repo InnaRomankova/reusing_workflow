@@ -8,5 +8,10 @@ jobs:
     uses: './.github/workflows/callworkflow.yml'
 
     steps:
+      - name: Git clone
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Package
         run: mvn package -D maven.test.skip

@@ -9,5 +9,10 @@ jobs:
     uses: './.github/workflows/packaging.yml'
 
     steps:
+      - name: Git clone
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - name: Run
         run: java -cp ./target/reusing_workflow-1.0-SNAPSHOT.jar org.example.Main
