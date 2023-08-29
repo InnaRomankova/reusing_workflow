@@ -22,4 +22,4 @@ jobs:
           path: ./target/
 
       - name: Use JAR File
-        run: java -cp ./target/devops_test-1.0-SNAPSHOT.jar org.example.Main
+        run: java -cp ./target/reusing_workflow-1.0-SNAPSHOT.jar org.example.Main
