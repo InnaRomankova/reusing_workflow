@@ -1,0 +1,24 @@
+name: Package
+
+on:
+  workflow_call:
+
+jobs:
+  package-run:
+    name: 'Package'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git clone
+        uses: actions/checkout@v2
+
+      - name: Install JDK
+        uses: ./.github/jdk/
+
+      - run: mvn package -DskipTests
+
+      - name: Upload JAR as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: compiled-jar
+          path: ./target/reusing_workflow-1.0-SNAPSHOT.jar
