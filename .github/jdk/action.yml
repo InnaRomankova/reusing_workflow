@@ -1,0 +1,20 @@
+name: 'JDK'
+description: 'Install JDK'
+inputs:
+  name:
+    required:
+    description:
+outputs:
+  random:
+    description:
+    value:
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install JDK
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'corretto'
+        java-version: '17'
+        cache: 'maven'

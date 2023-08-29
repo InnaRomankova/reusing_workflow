@@ -1,0 +1,25 @@
+name: Run
+
+on:
+  workflow_call:
+
+jobs:
+  package-run:
+    name: 'Run'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Git clone
+        uses: actions/checkout@v2
+
+      - name: Install JDK
+        uses: ./.github/jdk/
+
+      - name: Download JAR Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: compiled-jar
+          path: ./target/
+
+      - name: Use JAR File
+        run: java -cp ./target/devops_test-1.0-SNAPSHOT.jar org.example.Main
